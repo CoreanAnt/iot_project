@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <H1> sensor DB</H1> 
+</head>
+<body>
+
+	<div class="list-group">
+		<a href="{{url_for('data1')}}" class="list-group-item list-group-item-action">온도</a>
+		<a href="{{url_for('data2')}}" class="list-group-item list-group-item-action active" aria-current="true">습도</a>
+		<a href="{{url_for('data3')}}" class="list-group-item list-group-item-action">토양습도</a>
+	  </div>
+
+
+<br>
+<br>
+	<table class="table table-hover table-striped text-center" style=" width: 1000; border: 1px  solid #111114;">
+		<thead>
+			<tr>
+				<center>
+				<th>습도</th>
+				<th>시간</th>
+
+
+				</center>
+			</tr>
+		</thead>
+	    
+	    <tbody>
+			{% for i in data_list %}
+			<tr>
+				
+
+				<td><center>{{ i[0] }}</center></td>
+				<td><center>{{ i[1] }}</center></td>
+	
+
+			</tr>
+			{% endfor %}
+		</tbody>
+		
+	</table>
+
+
+
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+sudo ssh mj@192.168.1.xx cp /home/pi/mj/test.c /home/pi
+sudo apt install mariadb-10.0 -server && mariadb-10.0-client
+mysql -u mj -p 1234
+sudo chmod +w abc  (or 464)
+alias python = 'p3'
+kill pid
+#! bin/python (어떤 명령어 해석기를 이용하여 파일을 실행할 것인지 명시)
+sudo g++ test.cpp -o test  => ./test

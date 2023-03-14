@@ -1,0 +1,26 @@
+1. miniuart 서비스 사용안함 (블루투스)
+sudo systemctl stop serial-getty@ttyS0.service
+sudo systemctl disable serial-getty@ttyS0.service
+sudo systemctl mask serial-getty@ttyS0.service (구동불가 시키는거)
+
+2. /boot/firmware/config.txt
+맨 마지막에
+#enable_uart=1 (주석처리 하는 것임)
+dtoverlay=disable-bt
+cmdline=cmdline.txt
+
+/boot/firmware/cmdline.txt 여기에서
+console=serial0,115200 지우기
+
+3. 그룹 추가
+sudo adduser 사용자이름 tty
+sudo adduser 사용자이름 dialout
+
+사용가능하게 추가
+sudo chmod 666 /dev/ttyAMA0
+
+그리고 다시시작
+(통신은 putty로 했음)
+
+참고 : https://askubuntu.com/questions/1254376/enable-uart-communication-on-pi4-ubuntu-20-04
+https://movehoon.tistory.com/115

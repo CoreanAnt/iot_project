@@ -1,0 +1,34 @@
+git config --global user.name "name"
+git config --global user.email "god@god.com"
+
+git init
+
+git status
+
+git add .
+
+git commit -m "메시지"
+
+git remote -v
+
+git remote remove origin
+
+git remote add origin 레퍼지토리 주소
+
+git push origin 브렌치 이름
+
+git branch 브렌치이름
+
+git branch -a
+
+git checkout 브렌치이름
+
+
+
+
+git checkout master   //디폴트 브렌치로 바꾸자
+
+git merge 브랜치이름
+git status
+
+git push origin 디폴트브렌치이름

@@ -1,0 +1,23 @@
+윈도우 원격 데스크톱 접속
+
+systemctl status xrdp //확인
+sudo apt install xrdp //설치
+sudo systemctl enable --now xrdp //부팅 후 자동 시작
+sudo ufw allow from any to any port 3389 proto tcp //포트 방화벽 열기
+
+
+
+이후 윈도우로 가서 원격데스크톱연결에 들어가 IP주소 적고, xorg로 이름 비번 적으면 로그인 된다.
+로그인이 안될때는 기존 우분투가 로그아웃 되어있는지 확인한다.
+
+xrdp 킬때 무한 로그인 창이 나올때는 
+sudo vim /etc/polkit-1/localauthority/50-local.d/color.pkla
+
+[Allow colord for all users]
+Identity=unix-user:*
+Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile
+ResultAny=yes
+ResultInactive=yes
+ResultActive=yes
+
+이러면 다시 로그인을 물어보지 않는다.

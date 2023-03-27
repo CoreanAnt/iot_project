@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "run script"
+python3 /home/audtjr37/sensor/sensordb-70.5%/smartfarm2.py
+read reply
+
+#!/bin/bash
+echo "run script"
+python3 /home/audtjr37/sensor/sensordb-70.5%/main.py
+read reply
+
+
+등등

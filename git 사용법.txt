@@ -32,3 +32,5 @@ git merge 브랜치이름
 git status
 
 git push origin 디폴트브렌치이름
+
+잔디가 안생기면 아마 main브렌치로 머지하지 않아서 그런것임. 나중에 다 칠해짐/.

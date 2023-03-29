@@ -131,3 +131,34 @@ void UART_print32bitNumber(uint32_t no)
 	for(i = index; i >= 0; i--)
 	UART_transmit(numString[i]);
 }
+
+void PutChar0(char c)
+{
+	//   5번째 비트가 켜져있지 않으면 while문이 무한 반복하는데
+	//   5번째 비트가 켜지는 순간에 while 루프를 빠져나와서 데이터를 전송하는 원리
+	
+	//   데이터가 들어오지 않았다면 while문 반복
+	while ( !( UCSR0A & 0x20 ) );   //   5번째 bit를 사용
+	
+	//   데이터를 전송
+	UDR0 = c;
+}
+
+void Puts0(char* str)
+{
+	while(*str)
+	{
+		while(!(UCSR0A & (1 << UDRE0)));
+		UDR0 = *str++;
+	}
+}
+
+/*   문자열을 수신하는 함수   */
+char Gets0(void)
+{
+	//   데이터가 들어오지 않았다면 while문 반복
+	while ( !( UCSR0A & 0x80 ) );   //   RXC가 Set(8번째 자리)되어 있어야 한다.
+	
+	//   데이터를 리턴
+	return UDR0;
+}

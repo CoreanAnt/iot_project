@@ -1,5 +1,0 @@
-@echo off
-cd c:/projects/mysite
-set FLASK_APP=main
-set FLASK_DEBUG=true
-c:/venvs/mysite/scripts/activate

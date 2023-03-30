@@ -1,7 +1,0 @@
-create table water(
-sensing INT,
-ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-
-
-insert into sensordb(sensing) values(1);

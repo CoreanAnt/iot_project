@@ -1,0 +1,77 @@
+git config --global user.name "name"
+git config --global user.email "god@god.com"
+
+git init
+
+git status
+
+git add .
+
+git commit -m "메시지"
+
+git remote -v
+
+git remote remove origin
+
+git remote add origin 레퍼지토리 주소
+
+git push origin 브렌치 이름
+
+git branch 브렌치이름
+
+git branch -a
+
+git checkout 브렌치이름
+
+
+$ git push origin +master 강제 푸쉬
+
+
+
+
+git checkout master   //디폴트 브렌치로 바꾸자
+
+git merge 브랜치이름
+git status
+
+git push origin 디폴트브렌치이름
+
+git remote update 체크아웃 안될때
+
+
+
+리포지토리 일부 파일 삭제
+$ git rm --cached -r <SenSor(파일 이름)>
+$ git commit -m "delete" (커밋)
+$ git push origin video (푸쉬)
+
+실제 파일 머지 실패시
+git pull origin main --allow-unrelated-histories (대상 브렌치에서 해야함)
+그리고 머지 -> 푸쉬
+
+
+send-pack: unexpected disconnect while reading sideband packet
+fatal: the remote end hung up unexpectedly
+
+local(또는 global) config를 아래와 같이 수정
+
+git config --local http.postBuffer = 1024M 
+git config --local http.maxRequestBuffer.= 1024M
+
+/ or
+
+git config --local pack.deltaCacheSize = 1024M
+git config --local pack.packSizeLimit = 1024M
+git config --local pack.windowMemory = 1024M
+
+/or
+
+git config --local core.packedGitLimit - 1024m
+git config --local core.packedGitWindowSize - 1024m
+git config --local core.compression - 9
+
+
+/or
+
+git config --local ssh.postBuffer = 2048M
+git config --local ssh.maxRequestBuffer = 2048M

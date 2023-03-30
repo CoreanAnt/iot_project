@@ -1,0 +1,37 @@
+create database test;
+use test;
+
+create table Test;
+(
+ID INT not null auto_increment,
+Name VARCHAR(30),
+ReserveDate DATE,
+RoomNum INT,
+primary key(ID)
+) engine=myisam charset=utf8;
+
+
+show databases
+
+create table 문에서의 제약조건
+not null
+unique
+primary key
+
+alter table test modify IID int not null auto_increment primary key; (기존 컬럼에 자동증가 + pk 추가)
+
+테이블 삭제 
+drop table test;
+
+
+insert into 테이블(필드) values (데이터값1)
+
+
+(업데이트)
+UPDATE Reservation
+
+SET RoomNum = 2002
+
+WHERE Name = '홍길동';
+
+delete from test where name = 'lee';

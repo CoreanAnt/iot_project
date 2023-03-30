@@ -1,0 +1,28 @@
+설치: 먼저 아두이노 홈페이지에서 리눅스 tar.xz를 깐다.
+압축 풀고 ./install.sh
+로 설치
+ (자세한건 홈페이지에 있음)
+
+
+한글: 만약 한글이 깨지면 
+$ sudo vim /etc/apt/sources.list
+
+마지막 행에
+
+    ## Install font( NanumGothic-Coding )
+
+    deb http://dev.naver.com/repos deb/
+
+$sudo apt-get update
+
+//source.list #업데이트
+
+$ sudo apt-get install fonts-nanum-coding
+
+//나눔 고딕 설치
+
+
+이후 파일-> 프리퍼런스 들어가서 preferences.txt위치 파악 후 수정 font
+또한 arduino / lib / theme / theme.txt에서 시스템 폰트를 바꾼다. 다 친절하게 font 라고 붙어있음. 5-6개만 바꾸면 됨.
+
+

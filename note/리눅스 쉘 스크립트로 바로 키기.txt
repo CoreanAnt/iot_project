@@ -1,0 +1,26 @@
+#!/bin/bash
+echo "run script"
+python3 /home/audtjr37/sensor/sensordb-70.5%/smartfarm2.py
+read reply
+
+#!/bin/bash
+echo "run script"
+python3 /home/audtjr37/sensor/sensordb-70.5%/main.py
+read reply
+
+
+등등
+vim run_script.sh 으로 만들어 주시고 sh run_script.sh으로 킬 수 있음.
+
+sudo chmod +x run_script.sh 파일 실행위해 권한 변경
+
+sudo vim /etc/xdg/lxsession/LXDE-pi/autostart 여기 파일 수정
+
+맨 아래
+lxterminal -e ~/run_script.sh 경로등 적고 저장
+
+
+출처: https://ddangeun.tistory.com/114
+
+
+

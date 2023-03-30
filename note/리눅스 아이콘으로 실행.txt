@@ -1,0 +1,11 @@
+아이콘으로 실행
+[Desktop Entry]
+Encoding=UTF-8
+Name=server_start
+Type=Application
+Path=/home/audtjr37/sensor/sensordb-70.5%
+Icon=/home/audtjr37/sensor/sensordb-70.5%/sv.jpg
+Exec=sh db.sh
+Terminal=true
+
+출처: https://reason1241.tistory.com/20

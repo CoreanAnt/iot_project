@@ -1,0 +1,1 @@
+document.getElementById('demo').innerHTML = "아무런 기능이 없는, 재미로만 만든 페이지 ㅎㅎ;;";

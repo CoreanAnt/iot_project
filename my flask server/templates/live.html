@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+     </div>
+    
+{% endfor %}
+
+<html>
+  <head>
+    <title>Video Stream</title>
+  </head>
+  <body>
+    <h1>Video Stream</h1>
+      <div>
+          <img src="{{url_for('video')}}" width=70% />
+      </div>
+  </body>
+</html>
+
+
+{% endblock %}
